@@ -1,0 +1,444 @@
+
+
+	body{
+			margin: 0;
+ 			padding: 0;
+ 			width : 100%;
+   			height : 100%;
+   			font-family: 'Nanum Gothic', sans-serif;
+   			font-size: 15px;    
+   			line-height: 1.4;
+		}
+		
+
+ .clear {clear: both;}
+
+
+		div {
+			    display: block;
+			}
+			#wrap {
+				position: absolute;
+				width : 1900px;
+				height: 100%;
+			}
+			#hWrap{
+				height : 70px;
+				border-bottom: 1px solid;
+				width : 100%;
+				margin: 0px;
+				padding: 0px;
+				border-bottom-style: groove;
+				border-bottom-width: thin;
+				
+			}
+			#header1 h1{
+				float: left;
+				width: 140px;
+				height: 75px;
+				position: absolute;
+				left: 300px;
+				margin: 20px 0px;
+				padding: 0px;
+				
+			} 
+			#header2{
+				width:500px;
+				float: right;
+				position: absolute;
+				right: 400px;
+				margin: 40px 0px 0px 500px;
+				padding: 0px;
+			}
+			#header2 a{
+				position: relative;
+				
+				margin : 0px 15px;
+			}
+			#header3{
+				clear: both;
+				text-align: center;
+				height: 70px;
+				border-bottom: solid;
+				border-bottom-color: darkblue;
+				margin:0px;
+				padding:0px;
+			}
+			#header3 ul li{
+				display : inline-block; /* a 태그는 블럭 요소가 필요 -> inline형태로 만들면서 블럭 요소를 가지게 만드는 inline-block*/
+				width: 330px;
+				height: 21px;
+				border-top : black;
+				position :relative;
+			}
+			
+			#header3 ul #iconSearch{
+				position: absolute;
+				right : 450px;
+				width: 75px;
+				height: 75px;
+				border:solid 1px #ddd;
+				text-align: center;
+				top: 78px;
+				
+			}
+			
+			#header3 ul li .first{
+				font-weight: bold;
+				text-decoration: none;
+				font-size: 15pt;
+				color : black;
+				border-left:solid 1px #ddd;
+
+			}
+			
+		#rollcontents{
+		   background-image : url(img/roolcontentes배경화면.jpg);
+		   border:1px solid;
+		   width: 1400px;
+		   height: 650px;
+		   margin: 0 auto;
+		}
+			
+		#rollhead{
+			display : block;
+			margin: 85px 100px 25px 120px;
+ 			padding: 40px;
+ 			width: 500px;
+		  	height: 180px;
+		  	float : left;
+		}
+		
+		#rollgroup{
+		    width: 600px;
+		    height: 500px;
+		    margin: 35px 200px 25px 120px;
+			position: absolute;
+		    float : right;
+		    margin-left: 660px;
+		}
+		
+		#rollwork{
+			position: absolute;
+			top: 0;
+  			left: 0;		
+ 			float : left;
+		}
+		
+		
+		#rollintroduce{
+		position: absolute;
+		margin-left: 195px;
+		float : left;
+		}
+		
+		#rollvideo{
+		position: absolute;
+		margin-left: 390px;
+		float : right;
+		}
+		
+		#rollrecruit{
+		float : right;
+		position: absolute;
+		margin : 195px 0px 0px 195px;
+		}
+		
+		#rollslide{
+		float : left;
+		position: absolute;
+		margin : 390px 0px 0px 0px;
+		}
+		
+		#rollevent{
+		position: absolute;
+		float : left;
+		margin : 390px 0px 0px 195px;
+		}
+		
+		#rollbanner{
+		position: absolute;
+		float : right;
+		margin : 390px 195px 0px 390px;
+		}
+		
+		#contents{
+			float: left;
+			width: 1080px;
+	   		height: 910px;
+		}
+		
+		#top{
+			width: 1080px;
+	    	height: 300px;
+			/*position: relative; */
+			margin : 70px 0px 0px 400px; 
+		}
+		
+		#topcon1{
+		    width: 363px;
+		    height: 300px;
+		    float : left;
+		}
+		
+		#cyberhead{
+			width: 362px;
+		    height: 20px;
+			padding: 0px 0px 17px 25px;
+			display: block;
+		}
+		
+		#cybercont{
+			min-height: 220px;
+	   		margin : 30px 0px 0px 30px;
+	   		border-right : 2px solid #ededed;
+		}
+		
+		#topcon2{
+		    width: 364px;
+		    height: 300px;	  
+		    float : left;
+		   
+		}
+		
+		#terrorhead{
+			width: 362px;
+		    height: 20px;
+		    padding: 0px 0px 17px 25px;
+			display: block;
+		}
+		
+		#terrorcont{
+			min-height: 220px;
+	   		margin : 25px 0px 0px 25px;
+	   		border-right : 2px solid #ededed;
+		}
+		
+		#topcon3{
+		    width: 352px;
+		    height: 300px;
+		    float : left;
+		}
+		
+		#recenthead{
+			width: 362px;
+		    height: 20px;
+		    padding: 0px 0px 17px 25px;
+			display: block;
+		}
+		
+		#recentcont{
+			min-height: 220px;
+	   		margin : 30px 0px 10px -15px;
+	   		
+		}
+		
+		li{
+			list-style-type: none;		
+		}
+		
+	
+		
+		#mid{
+			width: 1080px;
+		    height: 500px;
+			position: absolute;
+			margin : 20px 0px 0px 400px;
+			border-top : 2px solid #ededed;
+		}
+		
+		#mid1{
+			width: 362px;
+		    height: 460px;
+		    float : left;
+		    padding : 20px 0px 0px 0px;
+		    border-right : 2px solid #ededed;
+		}
+		
+		
+		#terrorhead1{
+		    position: absolute;
+		    margin : 40px 0px 0px 10px;
+		    top: 0;
+		    left: 0;
+		    width: 400px;
+		    min-height: 40px;
+		}
+		
+		#terrorcont1{
+			margin : 80px 0px 0px -30px;
+			width: 400px;
+			height: 230px;
+		}
+		
+		#mid2{
+			width: 362px;
+		    height: 478px;
+		    float : left;
+		    border-right : 2px solid #ededed;
+		}
+		
+		#terrorhead2{
+			position: absolute;
+			margin : 40px 0px 0px 385px;
+		    top: 0;
+		    left: 0;
+		    width: 400px;
+		    min-height: 40px;
+		}
+		
+		#terrorcont2{
+			margin : 106px 0px 0px 20px;
+			width: 400px;
+			height: 230px;
+		}
+		
+		#mid3{
+			width: 362px;
+		    height: 500px;
+		    float : left;
+		}
+		
+		#terrorhead3{
+			position: absolute;
+			margin : 229px 0px 0px 385px;
+		    top: 0;
+		    left: 0;
+		    width: 335px;
+		    min-height: 40px;
+		}
+		
+		#terrorcont3{
+			position: absolute;
+			margin : 292px 0px 0px 384px;
+		    top: 0;
+		    left: 0;
+		    width: 320px;
+		    min-height: 40px;
+		}
+		
+		.more1{
+			margin : 0px 130px -10px 0px;			
+		}
+		
+		.more2{
+			margin : 0px 145px -5px 0px;
+			
+		}
+		
+		.more3{
+			margin : 0px 105px -5px 0px;
+			
+		}
+		
+		#mid4{
+			width: 360px;
+		    height: 500px;
+		    float : left;
+		}
+		
+		#terrorhead4{
+			position: absolute;
+			margin : 35px 0px 0px 760px;
+		    top: 0;
+		    left: 0;
+		    width: 309px;
+		    min-height: 40px;
+		}
+		
+		#terrorcont4{
+			position: absolute;
+			margin : 100px 0px 0px 750px;
+		    top: 0;
+		    left: 0;
+		    width: 309px;
+		    min-height: 40px;
+		}
+		
+		li{
+			line-height : 25px;
+		}
+		
+		#ban{
+			position: relative; 
+			margin : 458px 0px 0px 360px;
+			width: 1080px;
+			height: 180px;
+		}
+		
+		#bnn1{
+			position: relative; 
+			margin : -14px 10px 0px 5px;
+			width: 356px;
+			height: 180px;
+    		border-left: black;
+    		border : 1px solid #ededed;
+		}
+		
+		#bann1{
+			position: absolute;
+			margin : -75px 0px 0px -16px;
+			
+		}
+		
+		#bnn2{
+			position: relative; 
+			margin : -182px 10px 0px 365px;
+			width: 360px;
+			height: 180px;
+    		border-left: black;
+    		border : 1px solid #ededed;
+		}
+		
+		#bann2{
+			position: absolute;
+			margin : -75px 0px 0px -16px;
+		}
+		
+		#bnn3{
+			position: relative; 
+			margin : -182px 10px 0px 726px;
+			width: 359px;
+    		height: 180px;
+    		border-left: black;
+    		border : 1px solid #ededed;
+		}
+		
+		#bann3{
+			position: relative; 
+			margin : -75px 0px 0px -16px;
+		
+		}
+		#footer{
+			clear: both;
+			position: absolute;
+			width: 100%;     
+			height: 100px;
+			top: 1978px;
+			border-top:solid 1px #ddd;	
+			background: white;			
+			padding: 0;
+		}
+		#footer1 p{
+			float: left;
+			position :absolute;
+			left : 350px;
+		}
+		#in-area {
+			position: relative;
+			top:20px;
+			margin-left:10px;
+		}
+		#in-area ul li{
+			display : inline-block;
+			margin :0px;
+			padding:0px;
+			position: relative;
+			right:20px;
+			left:400px;
+			
+		}
+		#in-area_pic{
+			position :absolute;
+			left : 435px;
+		}
