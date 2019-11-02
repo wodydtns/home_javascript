@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function img(){
+           var img = document.getElementById("wrap");
+           img += document.createElement("div");
+           img += "<img src=nis/img/banner1.jpg>"
+           img += "<input type=text style=width:300px;height:200px;>";
+           img += "<img src=nis/img/banner1.jpg>";
+           document.getElementById("wrap").innerHTML = img;
+          
+        }
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <button onclick="img();">input</button>
+    </div>  
+</body>
+</html>
