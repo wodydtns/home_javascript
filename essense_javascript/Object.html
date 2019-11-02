@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Object</title>
+        <script>
+            var stooge = {
+                "first-name" : "Jerome",
+                "last-name" : "Howard"
+            }
+            var flight = {
+                airline : "Oceanic",
+                number : 815,
+                depature: {
+                    IATA : "SYD",
+                    time : "2004-09-22 14:55",
+                    city : "Sydney"
+                },
+                arrival : {
+                    IATA : "LAX",
+                    time : "2004-09-23 10:42",
+                    city : "Los Angeles"
+                }
+            };
+            console.log(flight.depature.IATA);
+           stooge['first-name'] = 'Jerome';
+             // 모든 객체는 속성을 상속하는 포로토타입 객체와 연결
+             // Object.create() 메서드는 지정된 프로토타입 객체 및 속성(property)을 갖는 새 객체를 만듭니다
+             // prototype : java의 class와 비슷한 기능, 상속x - 자세한 것은 prototype.html에
+             if(typeof Object.create !=='function'){
+                 Object.create = function(o){
+                     var F = function (){};
+                     F.prototype = o;
+                     return new F();
+                 };
+             }
+             var another_stooge = Object.create(stooge);
+             // 프로토타입 연결은 값의 갱신에 영향 받지 않음 -> 객체를 변경하더라도 객체의 프로토타입 영향x
+             // 프로토타입 연결은 객체 속성을 읽을때만 사용함 -> 해당 속성을 찾기 위해서 Object.prototype까지 읽고 없을 경우 undefined 반환 => 위임(delegation)
+
+             another_stooge['first-name'] = 'Harry';
+             another_stooge['middle-name'] = 'Moses';
+             another_stooge.nickname = 'Moe';
+             // 프로토타입에 새로운 속성이 추가 -> 해당 프로토타입을 근간으로 하는 객체들에도 추가된 속성이 나타남
+            //  stooge.profession = 'actor';
+            //  anthoer_stooge.profession 
+            //  열거(Enumeration) 방법 1
+             var name;
+             for (name in another_stooge){
+                 if(typeof another_stooge[name] !== 'function'){
+                     document.writeln(name + ':' + another_stooge[name]);
+                 }
+             }
+             //열거 방법2
+             document.write("<hr>");
+             var i;
+             var properties = [
+                 'first-name',
+                 'middle-name',
+                 'last-name',
+                 'profession'
+             ];
+             for(i=0;i<properties.length;i++){
+                 document.writeln(properties[i]+ ': ' + another_stooge[properties[i]])
+                 
+             }
+             // 원하는 속성을 자신이 원하는 순서대로 뽑을 수 있음
+            
+             // 전역변수는 프로그램의 유연성을 약화시킴 - 가능한한 회피
+            // 전역변수 사용을 최소화하는 방법
+            var MYAPP = {};
+            // 변수를 다른 전역변수를 위한 컨테이너로 사용
+            MYAPP.stooge = {
+                "first-name" : "Joe",
+                "last-name" : "Howard"
+            };
+            MYAPP.flight ={
+                airline : "Oceanic",
+                number : 815,
+                departure : {
+                    IATA : "SYD",
+                    time : "2004-09-22 14:55",
+                    city : "Sydney"
+                },
+                arrival : {
+                    IATA : "LAX",
+                    time : "2004-09-23 10:42",
+                    city : "Los Angeles"
+                }
+            };
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

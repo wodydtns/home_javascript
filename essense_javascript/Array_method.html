@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Array_method</title>
+        <script>
+            /*
+                toString 메소드는 배열을 ,로 구분해서 문자열로 반환
+            */
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("demo").innerHTML = fruits.toString(); // Banana,Orange,Apple,Mango
+            /*
+                join() 는 배열의 모든 요소를 특정 요소를 포함해 문자열로 반환
+            */
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("demo").innerHTML = fruits.join(" * "); // Banana * Orange * Apple * Mango
+
+            /*
+                pop()  - 배열에 맨 마지막 있는 값을 제거 - 변수로 지정 시 다른 배열로 반환 가능
+                push() - 배열 맨 마지막에 값 추가
+            */
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            var x = fruits.pop(); // pop으로 꺼낸 값을 변수 x에 저장
+            var y = fruits.push("Kiwi");  // push로 "kiwi"
+            console.log(fruits); //["Banana", "Orange", "Apple", "Mango","Kiwi"]
+            console.log(y); // 5 -> 왜 이렇게 나오는지 모르겠음..
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                document.getElementById("demo1").innerHTML = fruits;
+                document.getElementById("demo2").innerHTML = fruits.pop();
+                document.getElementById("demo3").innerHTML = fruits;
+                
+        </script>
+    </head>
+    <body>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        
+    </body>
+</html>

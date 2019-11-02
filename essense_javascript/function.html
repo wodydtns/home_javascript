@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>function</title>
+        <script>
+            // 객체 중에서 객체 리터럴로 생성되는 객체는 Object.prototype 에 연결
+            // 함수 객체는 Function.prototype에 연결
+            // 1. 함수리터럴
+            var add= function(a,b){
+             return a+b;
+             };
+
+             //2. 호출
+             //2.1 메소드 호출 패턴
+             // - 함수를 객체의 속성에 저장하는 경우 -> 함수 = 메소드 / 메소드 호출 시 this는 메소드를 포함하고 있는 객체에 바인딩
+             // increment 메소드의 매개변수는 선택적.
+             // 인수가 숫자가 아니면 1이 기본값으로 사용
+             var myObject = {
+                 value : 0,
+                 increment : function (inc){
+                     this.value += typeof inc === 'number' ? inc : 1;
+                 }
+             };
+             myObject.increment();
+             document.write(myObject.value); // 1
+             myObject.increment(2);
+             document.write(myObject.value); // 3
+             // this를 사용해서 객체의 값을 읽거나 변경, this와 객체의 바인딩은 호출되면 일어남, this는 객체 자체
+             //2.2 함수 호출 패턴
+             var sum = add(3,4);
+             myObject.double = function (){
+                 var that = this; // 대안, 변수를 this에 저장하고 that 할당 
+                 var helper = function (){
+                     that.value = add(that.value, that.value);
+                 };
+                 helper();  // helper를 함수로 호출
+             };
+             myObject.double();
+             console.log(myObject.getValue());
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
